@@ -17,17 +17,21 @@ sexpm =: 5 5 2 $ , ". ;. _2 ] 0 : 0
 0 3  4 2  2 2  0 6  1 2 NB. bark/()
 )
 
+NB. expand to include roots...
 tokens =: (0;sexpm;sexpc)&;:
 parens =: (<,'(')&= - (<,')')&=
 
-parse =: 3 : 0
-deps =. +/\ pars =. parens toks =. tokens y
-(ixes # deps) ; toks #~ ixes=.0=pars
+tree =: 3 : 0
+deps =. +/\ pars =. parens y
+(0,ixes#deps) (;&<) 'ROOT'; y #~ ixes=. 0 = pars
 )
 
-simple_test =: 3 : 0
-eg =: '(1123 2 ("ca(t\"" 55))'
-ex =: (1 1 2 2;'1123';(,'2');'"ca(t\"';'55') NB. will handle " better
-assert. ex -: parse eg
+parse =: 3 : 0
+trees =. (0 = +/\ parens toks) tree;.2 toks=. tokens y
+(;^:2 {."1 trees) ; ; {:"1 trees
 )
+
+exampler =: '((c d e)(a (f g)) abba baba (ab)) (a (b c) d)'
+exampleq =: '(1123 2 ("ca(t\"" 55))'
+
 
