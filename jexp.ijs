@@ -21,13 +21,12 @@ sexpm =: 6 7 2 $ , (". ;. _2)  0 : 0
 )
 
 tokens =: (0;sexpm;sexpc)&;:
-parens =: (<,'(')&= - (<,')')&=
+parens =: -/ @ ((;:'()')&(=/))
 
 NB. (*) I think this is sensible:
 NB.     sexpressions are parsed by dropping closing parens
 NB.     and decreasing the depth of opening parens by 1. this gives a
 NB.     depth vector that lines up with Hsu thesis ones.
 parse =: 3 : 0
-p=. parens t=. tokens y
-(b # (-p=1) + +/\ p) ; t #~ b=. 0 <: p
+(b # (-p=1) + +/\ p) ; t #~ b=. 0 <: p=. parens t=. tokens y
 )
