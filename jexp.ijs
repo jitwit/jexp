@@ -18,9 +18,15 @@ sexpm =: 5 5 2 $ , ". ;. _2 ] 0 : 0
 2 0  2 0  2 0  2 0  2 0 NB. esc/\
 0 3  4 2  2 2  0 6  1 2 NB. bark/()
 )
-NB. 4 3  0 6  0 6  0 6  0 6 NB. space
 
-NB. is there a simpler way to just use ;:?
 example =: '(1123 2 ("ca(t\"" 55))'
 
-parse =: (0;sexpm;sexpc)&;:
+tokens =: (0;sexpm;sexpc)&;:
+parens =: (<,'(')&= - (<,')')&=
+depths =: +/\ @: parens
+
+NB. (,. <"0 @ depths) @: tokens
+parse =: 3 : 0
+deps =. +/\ pars =. parens toks =. tokens y
+(ixes # deps) ; toks #~ ixes=.0=pars
+)
