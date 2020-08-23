@@ -5,8 +5,6 @@ NB. 1. tokenize with ;: respecting quoting and escaping
 NB. 2. produce depth vector from paren tokens
 NB. 3. select tokens that aren't parens and combine with depths
 
-NB. missing stuff includes comments, doing forests sensibly, and dots
-
 NB. sexpression machine, find tokens respecting quotation
 NB. char class: 0     1  2 3 4       5       6
 NB.             space () " \ comment newline letter
@@ -26,6 +24,7 @@ NB. expand to include roots...
 tokens =: (0;sexpm;sexpc)&;:
 parens =: (<,'(')&= - (<,')')&=
 
+NB. how to do this better?
 tree =: 3 : 0
 deps =. +/\ pars =. parens y
 (0,ixes#deps) (;&<) 'ROOT'; y #~ ixes=. 0 = pars
@@ -36,3 +35,7 @@ trees =. (0 = +/\ parens toks) tree;.2 toks=. tokens y
 (;^:2 {."1 trees) ; ; {:"1 trees
 )
 
+parse0 =: 3 : 0
+deps =. +/\ pars =. parens toks =. tokens y
+(ixes#deps) ; toks #~ ixes=. 0 = pars
+)
