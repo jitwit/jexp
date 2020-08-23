@@ -34,8 +34,8 @@ example6 =: 0 : 0
 
 NB. from wikipedia
 example7 =: 0 : 0
-(defun factorial (x)
-   (if (zerop x)
+(define (factorial x)
+   (if (zero? x)
        1
        (* x (factorial (- x 1)))))
 )
