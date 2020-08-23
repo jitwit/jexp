@@ -1,9 +1,7 @@
 NB. parsing s-expressions
-NB. idea might be to take several passes
-NB. find quoted regions
-NB. the second to find parens
-NB. find tokens
-NB. use paren information to produce depth vector of tokens
+NB. 1. tokenize with ;: respecting quoting and escaping
+NB. 2. produce depth vector from paren tokens
+NB. 3. select tokens that aren't parens and combine with depths
 
 NB. sexpression machine, find tokens respecting quotation
 NB. char class: 0     1  2 3 4
@@ -19,14 +17,17 @@ sexpm =: 5 5 2 $ , ". ;. _2 ] 0 : 0
 0 3  4 2  2 2  0 6  1 2 NB. bark/()
 )
 
-example =: '(1123 2 ("ca(t\"" 55))'
-
 tokens =: (0;sexpm;sexpc)&;:
 parens =: (<,'(')&= - (<,')')&=
-depths =: +/\ @: parens
 
-NB. (,. <"0 @ depths) @: tokens
 parse =: 3 : 0
 deps =. +/\ pars =. parens toks =. tokens y
 (ixes # deps) ; toks #~ ixes=.0=pars
 )
+
+simple_test =: 3 : 0
+eg =: '(1123 2 ("ca(t\"" 55))'
+ex =: (1 1 2 2;'1123';(,'2');'"ca(t\"';'55') NB. will handle " better
+assert. ex -: parse eg
+)
+
