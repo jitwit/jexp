@@ -11,7 +11,7 @@ NB.             space () " \ comment newline letter
 sexpc =: (1 I.~ (' ';'()';'"';'\';';';LF) e.&>~ ])"0 a.
 NB. states: 0       1   2    3   4    5    
 NB.         neutral tok quot esc brak comment
-sexpm =: 6 7 2 $ , ". ;. _2 ] 0 : 0
+sexpm =: 6 7 2 $ , (". ;. _2)  0 : 0
 0 1  4 1  2 1  0 6  5 1  0 1  1 1 NB. neutral
 0 3  4 2  2 2  0 6  5 2  0 3  1 0 NB. tok
 2 0  2 0  0 3  3 0  2 0  2 0  2 0 NB. quot/"
@@ -20,7 +20,6 @@ sexpm =: 6 7 2 $ , ". ;. _2 ] 0 : 0
 5 0  5 0  5 0  5 0  5 0  0 3  5 0 NB. comment
 )
 
-NB. expand to include roots...
 tokens =: (0;sexpm;sexpc)&;:
 parens =: (<,'(')&= - (<,')')&=
 
@@ -36,6 +35,5 @@ trees =. (0 = +/\ parens toks) tree;.2 toks=. tokens y
 )
 
 parse0 =: 3 : 0
-deps =. +/\ pars =. parens toks =. tokens y
-(ixes#deps) ; toks #~ ixes=. 0 = pars
+(b # +/\ p) ; t #~ b=. 0 = p=. parens t=. tokens y
 )
