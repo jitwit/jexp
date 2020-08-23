@@ -13,7 +13,7 @@ NB. states: 0       1   2    3   4    5
 NB.         neutral tok quot esc brak comment
 sexpm =: 6 7 2 $ , ". ;. _2 ] 0 : 0
 0 1  4 1  2 1  0 6  5 1  0 1  1 1 NB. neutral
-0 3  4 2  0 6  0 6  5 2  0 3  1 0 NB. tok
+0 3  4 2  2 2  0 6  5 2  0 3  1 0 NB. tok
 2 0  2 0  0 3  3 0  2 0  2 0  2 0 NB. quot/"
 2 0  2 0  2 0  2 0  2 0  2 0  2 0 NB. esc/\
 0 3  4 2  2 2  0 6  5 0  0 3  1 2 NB. bark/()
