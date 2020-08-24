@@ -56,3 +56,8 @@ NB. fixme: parses with extra space at end
 example9 =: 0 : 0
 ((42 T) ("A to Z" (1 2 3))) 
 )
+
+example10 =: 0 : 0
+(a ((b) c)); i am mishandled?
+(d e f)
+)
