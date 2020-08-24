@@ -1,5 +1,3 @@
-require 'stats/bonsai'
-load 'expressions.ijs'
 NB. parsing s-expressions
 NB. 1. tokenize with ;: respecting quoting and escaping
 NB. 2. produce depth vector from paren tokens
@@ -7,6 +5,9 @@ NB. 3. select tokens that aren't parens and combine with depths
 NB.      sexpressions are parsed by dropping closing parens
 NB.      and decreasing the depth of opening parens by 1. this gives a
 NB.      depth vector that lines up with Hsu thesis ones.
+
+require 'stats/bonsai'
+load 'expressions.ijs'
 
 NB. sexpression machine, find tokens respecting quotation
 NB. char class: 0     1  2 3 4       5       6
@@ -26,7 +27,8 @@ sexpm =: 6 7 2 $ , (". ;. _2)  0 : 0
 tokens =: (0;sexpm;sexpc)&;:
 parens =: (;:'()')&(-/@(=/))
 parse =: 3 : 0
-(b # (+/\ - 1&=) p) ,&< t #~ b=. 0 <: p=. parens t=. tokens y
+b=. 0 <: p=. parens t=. tokens y
+t (,~&<&(b&#) (+/\ - 1&=)) p
 )
 
 comment =: ';'-:{.
