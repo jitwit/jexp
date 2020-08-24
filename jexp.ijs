@@ -24,11 +24,10 @@ sexpm =: 6 7 2 $ , (". ;. _2)  0 : 0
 5 0  5 0  5 0  5 0  5 0  0 3  5 0 NB. comment
 )
 
-tokens =: (0;sexpm;sexpc)&;:
-parens =: (;:'()')&(-/@(=/))
+tokens =: (0;sexpm;sexpc) ;: y
 parse =: 3 : 0
-b=. 0 <: p=. parens t=. tokens y
-t ,~&<&(b&#) (+/\ - 1&=) p
+pars=. -/ (;:'()') =/ toks=. (0;sexpm;sexpc) ;: y
+toks ,~&<&((0<:pars)&#) (+/\ - 1&=) pars
 )
 
 comment =: ';'-:{.
