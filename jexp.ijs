@@ -28,7 +28,7 @@ tokens =: (0;sexpm;sexpc)&;:
 parens =: (;:'()')&(-/@(=/))
 parse =: 3 : 0
 b=. 0 <: p=. parens t=. tokens y
-t (,~&<&(b&#) (+/\ - 1&=)) p
+t ,~&<&(b&#) (+/\ - 1&=) p
 )
 
 comment =: ';'-:{.
