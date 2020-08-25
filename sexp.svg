@@ -20,7 +20,7 @@
 <title>libmo&#45;&gt;libmo</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M511.09,-520.02C521.55,-519.78 529.65,-517.5 529.65,-513.17 529.65,-510.39 526.33,-508.46 521.19,-507.36"/>
 <polygon fill="orange" stroke="orange" points="521.4,-503.86 511.09,-506.31 520.68,-510.83 521.4,-503.86"/>
-<text text-anchor="middle" x="528.1" y="-496.73" font-family="Times,serif" font-size="14.00">WS</text>
+<text text-anchor="middle" x="528.1" y="-496.73" font-family="Times,serif" font-size="14.00">ws</text>
 </g>
 <!-- libmo&#45;&gt;libmo -->
 <g id="edge4" class="edge">
@@ -34,7 +34,7 @@
 <title>libmo&#45;&gt;libmo</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M507.7,-530.39C535.86,-538.24 565.65,-532.5 565.65,-513.17 565.65,-496.1 542.43,-489.62 517.61,-493.74"/>
 <polygon fill="orange" stroke="orange" points="516.7,-490.36 507.7,-495.95 518.22,-497.2 516.7,-490.36"/>
-<text text-anchor="middle" x="521.97" y="-481.28" font-family="Times,serif" font-size="14.00">LF</text>
+<text text-anchor="middle" x="521.97" y="-481.28" font-family="Times,serif" font-size="14.00">nl</text>
 </g>
 <!-- paren -->
 <g id="node2" class="node">
@@ -112,14 +112,14 @@
 <title>libmo&#45;&gt;token</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M446.61,-490.05C412.59,-454.29 360.52,-383.18 333.6,-337.14"/>
 <polygon fill="orange" stroke="orange" points="336.55,-335.24 328.56,-328.28 330.46,-338.71 336.55,-335.24"/>
-<text text-anchor="middle" x="343.24" y="-335" font-family="Times,serif" font-size="14.00">letter</text>
+<text text-anchor="middle" x="343.24" y="-335" font-family="Times,serif" font-size="14.00">abc</text>
 </g>
 <!-- paren&#45;&gt;libmo -->
 <g id="edge37" class="edge">
 <title>paren&#45;&gt;libmo</title>
 <path fill="none" stroke="blue" stroke-dasharray="5,2" d="M468.84,-440.48C468.51,-448.97 468.42,-458.11 468.59,-466.93"/>
 <polygon fill="blue" stroke="blue" points="465.09,-467.18 468.89,-477.07 472.09,-466.97 465.09,-467.18"/>
-<text text-anchor="middle" x="460.8" y="-457.29" font-family="Times,serif" font-size="14.00">WS</text>
+<text text-anchor="middle" x="460.8" y="-457.29" font-family="Times,serif" font-size="14.00">ws</text>
 </g>
 <!-- paren&#45;&gt;libmo -->
 <g id="edge40" class="edge">
@@ -133,7 +133,7 @@
 <title>paren&#45;&gt;libmo</title>
 <path fill="none" stroke="blue" stroke-dasharray="5,2" d="M493.94,-436.13C495.62,-447.3 495.95,-459.97 494.92,-471.73"/>
 <polygon fill="blue" stroke="blue" points="491.44,-471.41 493.67,-481.77 498.38,-472.28 491.44,-471.41"/>
-<text text-anchor="middle" x="488.14" y="-460.94" font-family="Times,serif" font-size="14.00">LF</text>
+<text text-anchor="middle" x="488.14" y="-460.94" font-family="Times,serif" font-size="14.00">nl</text>
 </g>
 <!-- paren&#45;&gt;paren -->
 <g id="edge38" class="edge">
@@ -175,7 +175,7 @@
 <title>paren&#45;&gt;token</title>
 <path fill="none" stroke="darkgreen" stroke-dasharray="5,2" d="M442.82,-383.25C417.13,-366.6 381.44,-342.06 354.96,-322.92"/>
 <polygon fill="darkgreen" stroke="darkgreen" points="356.85,-319.97 346.71,-316.91 352.73,-325.62 356.85,-319.97"/>
-<text text-anchor="middle" x="364.38" y="-316.66" font-family="Times,serif" font-size="14.00">letter</text>
+<text text-anchor="middle" x="364.38" y="-316.66" font-family="Times,serif" font-size="14.00">abc</text>
 </g>
 <!-- string&#45;&gt;libmo -->
 <g id="edge21" class="edge">
@@ -189,7 +189,7 @@
 <title>string&#45;&gt;string</title>
 <path fill="none" stroke="gray" stroke-dasharray="5,2" d="M99.71,-185.16C109.89,-184.99 117.6,-184.02 117.6,-182.24 117.6,-181.12 114.59,-180.33 109.84,-179.84"/>
 <polygon fill="gray" stroke="gray" points="109.88,-176.34 99.71,-179.32 109.51,-183.33 109.88,-176.34"/>
-<text text-anchor="middle" x="116.39" y="-168.87" font-family="Times,serif" font-size="14.00">WS</text>
+<text text-anchor="middle" x="116.39" y="-168.87" font-family="Times,serif" font-size="14.00">ws</text>
 </g>
 <!-- string&#45;&gt;string -->
 <g id="edge20" class="edge">
@@ -210,7 +210,7 @@
 <title>string&#45;&gt;string</title>
 <path fill="none" stroke="gray" stroke-dasharray="5,2" d="M98.57,-191.77C133.6,-196.71 171.6,-193.53 171.6,-182.24 171.6,-172.05 140.66,-168.46 108.88,-171.49"/>
 <polygon fill="gray" stroke="gray" points="108.09,-168.06 98.57,-172.71 108.91,-175.01 108.09,-168.06"/>
-<text text-anchor="middle" x="113.88" y="-159.54" font-family="Times,serif" font-size="14.00">LF</text>
+<text text-anchor="middle" x="113.88" y="-159.54" font-family="Times,serif" font-size="14.00">nl</text>
 </g>
 <!-- string&#45;&gt;string -->
 <g id="edge25" class="edge">
@@ -231,7 +231,7 @@
 <title>string&#45;&gt;string</title>
 <path fill="none" stroke="gray" stroke-dasharray="5,2" d="M97.58,-195.01C153.97,-208.73 225.6,-204.47 225.6,-182.24 225.6,-161.3 162.12,-156.31 107.63,-167.24"/>
 <polygon fill="gray" stroke="gray" points="106.59,-163.89 97.58,-169.47 108.1,-170.72 106.59,-163.89"/>
-<text text-anchor="middle" x="111.86" y="-154.81" font-family="Times,serif" font-size="14.00">letter</text>
+<text text-anchor="middle" x="111.86" y="-154.81" font-family="Times,serif" font-size="14.00">abc</text>
 </g>
 <!-- escape -->
 <g id="node8" class="node">
@@ -251,14 +251,14 @@
 <title>comment&#45;&gt;libmo</title>
 <path fill="none" stroke="blue" stroke-dasharray="5,2" d="M295.26,-106.16C278.18,-162.56 255.66,-255.09 283.26,-329.38 310.7,-403.26 387.96,-458.57 435.8,-488.08"/>
 <polygon fill="blue" stroke="blue" points="434.01,-491.08 444.37,-493.28 437.64,-485.1 434.01,-491.08"/>
-<text text-anchor="middle" x="426.48" y="-487.62" font-family="Times,serif" font-size="14.00">LF</text>
+<text text-anchor="middle" x="426.48" y="-487.62" font-family="Times,serif" font-size="14.00">nl</text>
 </g>
 <!-- comment&#45;&gt;comment -->
 <g id="edge46" class="edge">
 <title>comment&#45;&gt;comment</title>
 <path fill="none" stroke="gray" stroke-dasharray="5,2" d="M363.22,-56.81C373.74,-56.48 381.2,-55.52 381.2,-53.95 381.2,-52.96 378.29,-52.22 373.53,-51.72"/>
 <polygon fill="gray" stroke="gray" points="373.42,-48.2 363.22,-51.08 372.99,-55.19 373.42,-48.2"/>
-<text text-anchor="middle" x="379.97" y="-40.79" font-family="Times,serif" font-size="14.00">WS</text>
+<text text-anchor="middle" x="379.97" y="-40.79" font-family="Times,serif" font-size="14.00">ws</text>
 </g>
 <!-- comment&#45;&gt;comment -->
 <g id="edge47" class="edge">
@@ -307,14 +307,14 @@
 <title>comment&#45;&gt;comment</title>
 <path fill="none" stroke="gray" stroke-dasharray="5,2" d="M360.71,-70.51C427.26,-84.37 507.2,-78.85 507.2,-53.95 507.2,-30.26 434.88,-24.1 370.54,-35.49"/>
 <polygon fill="gray" stroke="gray" points="369.87,-32.06 360.71,-37.38 371.19,-38.93 369.87,-32.06"/>
-<text text-anchor="middle" x="375.29" y="-23.13" font-family="Times,serif" font-size="14.00">letter</text>
+<text text-anchor="middle" x="375.29" y="-23.13" font-family="Times,serif" font-size="14.00">abc</text>
 </g>
 <!-- hash&#45;&gt;libmo -->
 <g id="edge55" class="edge">
 <title>hash&#45;&gt;libmo</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M629.33,-84.01C616.96,-151.8 611.16,-323.49 539.26,-440.77 530.56,-454.95 517.96,-467.44 505.81,-477.83"/>
 <polygon fill="red" stroke="red" points="503.4,-475.28 497.94,-484.36 507.87,-480.67 503.4,-475.28"/>
-<text text-anchor="middle" x="505.64" y="-464.39" font-family="Times,serif" font-size="14.00">WS</text>
+<text text-anchor="middle" x="505.64" y="-464.39" font-family="Times,serif" font-size="14.00">ws</text>
 </g>
 <!-- hash&#45;&gt;libmo -->
 <g id="edge57" class="edge">
@@ -335,7 +335,7 @@
 <title>hash&#45;&gt;libmo</title>
 <path fill="none" stroke="red" stroke-dasharray="5,2" d="M656.79,-83.01C671.01,-150.1 665.52,-322.91 593.26,-440.77 577.01,-467.26 547.15,-487.82 520.11,-499.93"/>
 <polygon fill="red" stroke="red" points="518.57,-496.78 510.69,-503.86 521.27,-503.24 518.57,-496.78"/>
-<text text-anchor="middle" x="522.82" y="-486.86" font-family="Times,serif" font-size="14.00">LF</text>
+<text text-anchor="middle" x="522.82" y="-486.86" font-family="Times,serif" font-size="14.00">nl</text>
 </g>
 <!-- hash&#45;&gt;libmo -->
 <g id="edge61" class="edge">
@@ -370,7 +370,7 @@
 <title>hash&#45;&gt;token</title>
 <path fill="none" stroke="darkgreen" stroke-dasharray="5,2" d="M614.1,-70.31C590.38,-81.05 555.86,-95.6 525.26,-107.89 483.74,-124.56 466.48,-116.31 431.26,-143.89 393.62,-173.37 364.25,-220.34 344.75,-253.47"/>
 <polygon fill="darkgreen" stroke="darkgreen" points="341.55,-252.02 339.52,-262.42 347.59,-255.56 341.55,-252.02"/>
-<text text-anchor="middle" x="341.19" y="-240.8" font-family="Times,serif" font-size="14.00">letter</text>
+<text text-anchor="middle" x="341.19" y="-240.8" font-family="Times,serif" font-size="14.00">abc</text>
 </g>
 <!-- quote&#45;&gt;libmo -->
 <g id="edge67" class="edge">
@@ -412,14 +412,14 @@
 <title>quote&#45;&gt;quote</title>
 <path fill="none" stroke="gray" stroke-dasharray="5,2" d="M504.78,-189.09C515.24,-188.82 523.3,-186.53 523.3,-182.24 523.3,-179.48 519.99,-177.56 514.87,-176.46"/>
 <polygon fill="gray" stroke="gray" points="515.1,-172.96 504.78,-175.39 514.36,-179.92 515.1,-172.96"/>
-<text text-anchor="middle" x="521.81" y="-165.85" font-family="Times,serif" font-size="14.00">WS</text>
+<text text-anchor="middle" x="521.81" y="-165.85" font-family="Times,serif" font-size="14.00">ws</text>
 </g>
 <!-- quote&#45;&gt;quote -->
 <g id="edge69" class="edge">
 <title>quote&#45;&gt;quote</title>
 <path fill="none" stroke="gray" stroke-dasharray="5,2" d="M503.2,-195.28C522.99,-197.83 541.3,-193.48 541.3,-182.24 541.3,-172.93 528.74,-168.34 513.19,-168.49"/>
 <polygon fill="gray" stroke="gray" points="512.93,-165 503.2,-169.19 513.43,-171.98 512.93,-165"/>
-<text text-anchor="middle" x="518.94" y="-156.76" font-family="Times,serif" font-size="14.00">LF</text>
+<text text-anchor="middle" x="518.94" y="-156.76" font-family="Times,serif" font-size="14.00">nl</text>
 </g>
 <!-- quote&#45;&gt;quote -->
 <g id="edge71" class="edge">
@@ -433,21 +433,21 @@
 <title>quote&#45;&gt;token</title>
 <path fill="none" stroke="darkgreen" stroke-dasharray="5,2" d="M440.87,-207.4C417.75,-225.26 384.55,-249.51 358.61,-267.46"/>
 <polygon fill="darkgreen" stroke="darkgreen" points="356.38,-264.74 350.11,-273.29 360.34,-270.51 356.38,-264.74"/>
-<text text-anchor="middle" x="359.26" y="-254.08" font-family="Times,serif" font-size="14.00">letter</text>
+<text text-anchor="middle" x="359.26" y="-254.08" font-family="Times,serif" font-size="14.00">abc</text>
 </g>
 <!-- token&#45;&gt;libmo -->
 <g id="edge10" class="edge">
 <title>token&#45;&gt;libmo</title>
 <path fill="none" stroke="blue" stroke-dasharray="5,2" d="M336.67,-325.18C363.09,-365.49 413.04,-435.44 445.31,-477.41"/>
 <polygon fill="blue" stroke="blue" points="442.62,-479.66 451.51,-485.41 448.15,-475.37 442.62,-479.66"/>
-<text text-anchor="middle" x="435.51" y="-473.48" font-family="Times,serif" font-size="14.00">WS</text>
+<text text-anchor="middle" x="435.51" y="-473.48" font-family="Times,serif" font-size="14.00">ws</text>
 </g>
 <!-- token&#45;&gt;libmo -->
 <g id="edge15" class="edge">
 <title>token&#45;&gt;libmo</title>
 <path fill="none" stroke="blue" stroke-dasharray="5,2" d="M342.99,-320.72C372.71,-358.68 422.84,-428.45 452.22,-472.46"/>
 <polygon fill="blue" stroke="blue" points="449.37,-474.5 457.81,-480.91 455.21,-470.64 449.37,-474.5"/>
-<text text-anchor="middle" x="442.46" y="-467.8" font-family="Times,serif" font-size="14.00">LF</text>
+<text text-anchor="middle" x="442.46" y="-467.8" font-family="Times,serif" font-size="14.00">nl</text>
 </g>
 <!-- token&#45;&gt;libmo -->
 <g id="edge16" class="edge">
@@ -496,14 +496,14 @@
 <title>token&#45;&gt;token</title>
 <path fill="none" stroke="gray" stroke-dasharray="5,2" d="M350.51,-311.79C371.36,-317.08 391.65,-310.81 391.65,-292.98 391.65,-278.07 377.47,-271.25 360.64,-272.5"/>
 <polygon fill="gray" stroke="gray" points="359.81,-269.09 350.51,-274.17 360.95,-276 359.81,-269.09"/>
-<text text-anchor="middle" x="365.37" y="-260.31" font-family="Times,serif" font-size="14.00">letter</text>
+<text text-anchor="middle" x="365.37" y="-260.31" font-family="Times,serif" font-size="14.00">abc</text>
 </g>
 <!-- escape&#45;&gt;string -->
 <g id="edge28" class="edge">
 <title>escape&#45;&gt;string</title>
 <path fill="none" stroke="gray" stroke-dasharray="5,2" d="M25.09,-75.81C11.36,-97.56 10.39,-131.69 22.17,-155.2"/>
 <polygon fill="gray" stroke="gray" points="19.32,-157.25 27.54,-163.94 25.29,-153.59 19.32,-157.25"/>
-<text text-anchor="middle" x="12.52" y="-150.32" font-family="Times,serif" font-size="14.00">WS</text>
+<text text-anchor="middle" x="12.52" y="-150.32" font-family="Times,serif" font-size="14.00">ws</text>
 </g>
 <!-- escape&#45;&gt;string -->
 <g id="edge29" class="edge">
@@ -538,7 +538,7 @@
 <title>escape&#45;&gt;string</title>
 <path fill="none" stroke="gray" stroke-dasharray="5,2" d="M79.9,-92.09C81.8,-106.59 82.01,-123.3 80.55,-138.31"/>
 <polygon fill="gray" stroke="gray" points="77.06,-138.02 79.27,-148.39 84.01,-138.91 77.06,-138.02"/>
-<text text-anchor="middle" x="73.78" y="-127.54" font-family="Times,serif" font-size="14.00">LF</text>
+<text text-anchor="middle" x="73.78" y="-127.54" font-family="Times,serif" font-size="14.00">nl</text>
 </g>
 <!-- escape&#45;&gt;string -->
 <g id="edge34" class="edge">
@@ -559,7 +559,7 @@
 <title>escape&#45;&gt;string</title>
 <path fill="none" stroke="gray" stroke-dasharray="5,2" d="M101.19,-68.98C127.48,-91.99 128.87,-137.72 105.37,-163.14"/>
 <polygon fill="gray" stroke="gray" points="102.79,-160.75 97.68,-170.03 107.46,-165.96 102.79,-160.75"/>
-<text text-anchor="middle" x="104.75" y="-149.78" font-family="Times,serif" font-size="14.00">letter</text>
+<text text-anchor="middle" x="104.75" y="-149.78" font-family="Times,serif" font-size="14.00">abc</text>
 </g>
 </g>
 </svg>

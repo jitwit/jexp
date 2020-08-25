@@ -9,7 +9,7 @@ NB.      depth vector that lines up with Hsu thesis ones.
 require 'stats/bonsai'
 load 'expressions.ijs'
 
-sexpc =: ' ';'()';'"';'\';';';LF;'#';''''
+sexpc =: (' ',TAB);'()';'"';'\';';';(LF,CR);'#';''''
 
 NB. will modify escape to be ok for chars after #
 NB. sexpression machine, find tokens respecting quotation
@@ -27,7 +27,7 @@ sexpm =: 8 9 2 $ , (". ;. _2)  0 : 0
 0 3  4 2  2 2  0 6  5 2  0 3  6 2  7 2  1 2 NB. bark/()
 5 0  5 0  5 0  5 0  5 0  0 3  5 0  5 0  5 0 NB. comment
 0 6  4 2  0 6  1 0  0 6  0 6  0 6  7 2  1 2 NB. #
-7 0  4 2  4 2  0 6  5 2  7 0  6 2  7 2  1 2 NB. '
+0 3  4 2  4 2  0 6  5 2  0 3  6 2  7 2  1 2 NB. '
 )
 
 tokens =: (5;sexpm;sexpa)&;:
