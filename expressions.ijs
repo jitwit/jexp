@@ -61,3 +61,22 @@ example10 =: 0 : 0
 (a ((b) c)); i am mishandled?
 (d e f)
 )
+
+example11 =: 0 : 0
+ (ship (registry 1701)
+       (x        42)
+       (y        13))
+)
+
+example12 =: 0 : 0
+ (users
+   ((uid 1)   (name root) (gid 1))
+   ((uid 108) (name matt) (gid 108))
+   ((uid 109) (name ralf) (gid 109)))
+)
+
+example13 =: 0 : 0
+((bool #t)
+ (char #\x)
+ (vec '#(a b c)))
+)
