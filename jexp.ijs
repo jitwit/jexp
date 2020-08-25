@@ -20,17 +20,17 @@ sexpa =: (1 I.~ sexpc e.&>~ ])"0 a.
 NB. states: 0       1   2    3   4    5    
 NB.         neutral tok quot esc brak comment
 sexpm =: 8 9 2 $ , (". ;. _2)  0 : 0
-0 1  4 1  2 1  0 6  5 1  0 1  6 1    1 1 NB. neutral
-0 3  4 2  2 2  1 0  5 2  0 3  0 6    1 0 NB. tok
-2 0  2 0  0 3  3 0  2 0  2 0  2 0    2 0 NB. quot/"
-2 0  2 0  2 0  2 0  2 0  2 0  2 0    2 0 NB. esc/\
-0 3  4 2  2 2  0 6  5 2  0 3  6 2    1 2 NB. bark/()
-5 0  5 0  5 0  5 0  5 0  0 3  5 0    5 0 NB. comment
-0 6  4 2  0 6  1 0  0 6  0 6  0 6    5 0 NB. #
-7 0  4 2  2 2  0 6  5 2  0 6  0 6    5 0 NB. '
+0 1  4 1  2 1  0 6  5 1  0 1  6 1  7 1  1 1 NB. neutral
+0 3  4 2  2 2  1 0  5 2  0 3  0 6  7 2  1 0 NB. tok
+2 0  2 0  0 3  3 0  2 0  2 0  2 0  2 0  2 0 NB. quot/"
+2 0  2 0  2 0  2 0  2 0  2 0  2 0  2 0  2 0 NB. esc/\
+0 3  4 2  2 2  0 6  5 2  0 3  6 2  7 2  1 2 NB. bark/()
+5 0  5 0  5 0  5 0  5 0  0 3  5 0  5 0  5 0 NB. comment
+0 6  4 2  0 6  1 0  0 6  0 6  0 6  7 2  1 2 NB. #
+7 0  4 2  4 2  0 6  5 2  7 0  6 2  7 2  1 2 NB. '
 )
 
-tokens =: (0;sexpm;sexpa)&;:
+tokens =: (5;sexpm;sexpa)&;:
 parse =: 3 : 0
 mask=. 0 <: pars=. -/ (;:'()') =/ toks=. (0;sexpm;sexpa) ;: y
 toks ,~&<&(mask&#) (+/\ - 1&=) pars
