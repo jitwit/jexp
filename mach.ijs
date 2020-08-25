@@ -15,8 +15,8 @@ export =: 3 : 0
 )
 
 drawit =: 3 : 0
-labv =: 'libmo';'token';'quote';'escape';'paren';'comment'
-labc =: 'WS';'()';'\"';'\\';';';'LF';'letter'
+labv =: 'libmo';'token';'string';'escape';'paren';'comment';'hash';'quote'
+labc =: 'WS';'()';'\"';'\\';';';'LF';'#';'''';'letter'
 (export (labv ,&< labc) , < sexpm) 1!:2 < 'sexp.dot'
 2!:0 'dot -Tsvg sexp.dot -o sexp.svg; xdg-open sexp.svg'
 )
