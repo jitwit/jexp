@@ -63,12 +63,12 @@ digraph {
   hash->libmo[headlabel="#",color=red,labeldistance=1.8,style=dashed];
   hash->quote[headlabel="'",color=darkgreen,labeldistance=1.8,style=dashed];
   hash->token[headlabel="abc",color=darkgreen,labeldistance=1.8,style=dashed];
-  quote->quote[headlabel="ws",color=gray,labeldistance=1.8,style=dashed];
+  quote->libmo[headlabel="ws",color=blue,labeldistance=1.8,style=dashed];
   quote->paren[headlabel="()",color=darkgreen,labeldistance=1.8,style=dashed];
   quote->paren[headlabel="\"",color=darkgreen,labeldistance=1.8,style=dashed];
   quote->libmo[headlabel="\\",color=red,labeldistance=1.8,style=dashed];
   quote->comment[headlabel=";",color=darkgreen,labeldistance=1.8,style=dashed];
-  quote->quote[headlabel="nl",color=gray,labeldistance=1.8,style=dashed];
+  quote->libmo[headlabel="nl",color=blue,labeldistance=1.8,style=dashed];
   quote->hash[headlabel="#",color=darkgreen,labeldistance=1.8,style=dashed];
   quote->quote[headlabel="'",color=darkgreen,labeldistance=1.8,style=dashed];
   quote->token[headlabel="abc",color=darkgreen,labeldistance=1.8,style=dashed];
