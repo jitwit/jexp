@@ -15,7 +15,7 @@ G 1!:2 < N,'.dot'
 )
 
 dotsexp =: 3 : 0
-labv =: 'libmo';'token';'string';'escape';'paren';'comment';'hash';'quote'
+labv =: 'limbo';'token';'string';'escape';'paren';'comment';'hash';'quote'
 labc =: 'ws';'()';'\"';'\\';';';'nl';'#';'''';'abc'
 dotviz (labv ,&< labc) , SM;'sexp'
 2!:0 'xdg-open sexp.svg'
