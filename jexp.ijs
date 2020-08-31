@@ -30,10 +30,26 @@ SM =: 8 9 2 $ , (". ;. _2)  0 : 0
 0 3  4 2  4 2  0 6  5 2  0 3  6 2  7 2  1 2 NB. '
 )
 
-tokens =: (4;SM;SA)&;:
 parse =: 3 : 0
 m=. 0 <: p=. (;:'()') -/@(=/) t=. (0;SM;SA) ;: y
 t ,~&<&(m&#) (+/\ - 1&=) p
+)
+
+NB. depth => parent (Hsu)
+P =: 3 : 0
+ps=. 0 #~ n =. # y
+for_lk. 2 ]\ (i.n) </.~ y
+do. ps=. ps k }~ l {~ <: l I. k [ 'l k' =. lk
+end. ps + (i. n) * 0 = y
+)
+
+I =: {~
+
+header =: ;: 'parent depth identity tokens'
+parse0 =: 3 : 0
+m=. 0 <: d=. (;:'()') -/@(=/) t=. (0;SM;SA) ;: y
+d=. m # (+/\ - 1&=) d
+header ,: (P d) ; d ; (i i. t) ; < i=. ~. t=. m # t
 )
 
 comment =: ';'-:{.
