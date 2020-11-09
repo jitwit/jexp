@@ -5,10 +5,7 @@ NB. 3. select tokens that aren't parens and combine with depths
 NB.      sexpressions are parsed by dropping closing parens
 NB.      and decreasing the depth of opening parens by 1. this gives a
 NB.      depth vector that lines up with Hsu thesis ones.
-
-require 'stats/bonsai'
-load 'expressions.ijs'
-
+coclass 'jexp'
 SC =: (' ',TAB);'()';'"';'\';';';(LF,CR);'#';''''
 
 NB. will modify escape to be ok for chars after #
@@ -17,8 +14,6 @@ NB. char class: 0     1  2 3 4       5       6
 NB.             space () " \ comment newline letter
 NB. sexpa =: (1 I.~ (' ';'()';'"';'\';';';LF) e.&>~ ])"0 a.
 SA =: (1 I.~ SC e.&>~ ])"0 a.
-NB. states: 0       1   2    3   4    5    
-NB.         neutral tok quot esc brak comment
 SM =: 8 9 2 $ , (". ;. _2)  0 : 0
 0 1  4 1  2 1  0 6  5 1  0 1  6 1  7 1  1 1 NB. neutral
 0 3  4 2  2 2  1 0  5 2  0 3  0 6  7 2  1 0 NB. tok
@@ -30,31 +25,9 @@ SM =: 8 9 2 $ , (". ;. _2)  0 : 0
 0 3  4 2  4 2  0 6  5 2  0 3  6 2  7 2  1 2 NB. '
 )
 
-parse =: 3 : 0
+sexp =: 3 : 0
 m=. 0 <: p=. (;:'()') -/@(=/) t=. (0;SM;SA) ;: y
 t ,~&<&(m&#) (+/\ - 1&=) p
 )
 
-NB. depth => parent (Hsu)
-P =: 3 : 0
-ps=. 0 #~ n =. # y
-for_lk. 2 ]\ (i.n) </.~ y
-do. ps=. ps k }~ l {~ <: l I. k [ 'l k' =. lk
-end. ps + (i. n) * 0 = y
-)
-
-I =: {~
-
-header =: ;: 'parent depth identity tokens'
-parse0 =: 3 : 0
-m=. 0 <: d=. (;:'()') -/@(=/) t=. (0;SM;SA) ;: y
-d=. m # (+/\ - 1&=) d
-header ,: (P d) ; d ; (i i. t) ; < i=. ~. t=. m # t
-)
-
-comment =: ';'-:{.
-nocomment =: 3 : 0
-'d t' =. y
-b =. -.@comment &> t
-d ,&<&(b&#) t
-)
+sexp_z_ =: sexp_jexp_
