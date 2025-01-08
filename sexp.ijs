@@ -5,7 +5,7 @@ NB. 3. select tokens that aren't parens and combine with depths
 NB.      sexpressions are parsed by dropping closing parens
 NB.      and decreasing the depth of opening parens by 1. this gives a
 NB.      depth vector that lines up with Hsu thesis ones.
-coclass 'jexp'
+coclass 'sexp'
 SC =: (' ',TAB);'()';'"';'\';';';(LF,CR);'#';''''
 
 NB. will modify escape to be ok for chars after #
@@ -25,9 +25,9 @@ SM =: 8 9 2 $ , (". ;. _2)  0 : 0
 0 3  4 2  4 2  0 6  5 2  0 3  6 2  7 2  1 2 NB. '
 )
 
-sexp =: 3 : 0
-m=. 0 <: p=. (;:'()') -/@(=/) t=. (0;SM;SA) ;: y
-t ,~&<&(m&#) (+/\ - 1&=) p
-)
+NB. sexp y produces depth vector and tokens list representing parsed
+NB. s-expression (t for toks, p for parens)
+sexp =: {{p=.(;:'()') -/@(=/) t=.(0;SM;SA);:y
+          t ,~&<&((0<:p)&#) (+/\-1&=) p}}
 
-sexp_z_ =: sexp_jexp_
+sexp_z_ =: sexp_sexp_
